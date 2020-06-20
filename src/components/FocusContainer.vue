@@ -9,7 +9,7 @@
       </div>.
       <h1 class="splash-head" id="simpleUsage"></h1>
       <p class="splash-subhead">"Life shouldn't be stuck between 1s and 0s."</p>
-      <a href="#" class="testing" data-text="#@#@#@#@">Download Resume</a>
+      <a href="./resume.pdf" target="_blank" class="testing" data-text="#@#@#@#@">Download Resume</a>
     </div>
   </div>
 </template>
