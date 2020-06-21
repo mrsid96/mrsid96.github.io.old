@@ -9,8 +9,9 @@
         <br />I'm Sidharth Patnaik
       </h2>
       <p class="lead iq-tw-4">
-        This dude to the left is not just another developer!
-        <br />Currently, he is working in a financial domain, building <b>Onboarding products and Solutions.</b>
+        This dude {{isMobile ? "on the top": "to the left"}} is not just another developer!
+        <br />Currently, he is working in a financial domain, building
+        <b>Onboarding products and Solutions.</b>
       </p>
       <p>
         You Can drop him an email at
@@ -27,7 +28,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => ({
+    isMobile: /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
+  })
+};
 </script>
 
 <style scoped>
