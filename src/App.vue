@@ -1,23 +1,37 @@
 <template>
   <div id="app">
-    <Header/>
-    <FocusContainer/>
-    <!-- <div class="glitch">
-      <h1>mrSid96</h1>
-      <h1>mrSid96</h1>
-      <h1>mrSid96</h1>
-    </div> -->
+    <div class="splash-container" id="vanta">
+      <router-view />
+    </div>
+    <div class="footer">© Sidharth Patnaik</div>
   </div>
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
-import FocusContainer from "@/components/FocusContainer.vue";
+import * as THREE from "three";
+import NET from "vanta/dist/vanta.net.min";
 export default {
   name: "App",
-  components: {
-    Header,
-    FocusContainer
+  data: () => ({
+    isMobile: /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
+  }),
+  created() {
+    setTimeout(() => {
+      NET({
+        el: "#vanta",
+        mouseControls: true,
+        touchControls: true,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        THREE: THREE,
+        points: this.isMobile ? 3 : 10,
+        maxDistance: this.isMobile ? 14 : 20,
+        color: 0xbb909f,
+        backgroundColor: 0x232028
+      });
+    }, 200);
   }
 };
 </script>

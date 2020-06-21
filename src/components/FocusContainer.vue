@@ -1,16 +1,19 @@
 <template>
-  <div class="splash-container">
-    <div class="splash">
-      <img class="avatar" src="@/assets/avatar.jpeg" />
-      <div class="glitch">
-        <p class="text">mrSid96</p>
-        <p class="text">mrSid96</p>
-        <p class="text">mrSid96</p>
-      </div>.
-      <h1 class="splash-head" id="simpleUsage"></h1>
-      <p class="splash-subhead">"Life shouldn't be stuck between 1s and 0s."</p>
-      <a href="./resume.pdf" target="_blank" class="testing" data-text="#@#@#@#@">Download Resume</a>
-    </div>
+  <div class="splash onTop">
+    <img class="avatar" src="@/assets/avatar.jpeg" />
+    <div class="glitch">
+      <p class="text">mrSid96</p>
+      <p class="text">mrSid96</p>
+      <p class="text">mrSid96</p>
+    </div>.
+    <h1 class="splash-head" id="simpleUsage"></h1>
+    <p class="splash-subhead">"Life shouldn't be stuck between 1s and 0s."</p>
+    <a
+      @click="$router.push({path: '/more'})"
+      target="_blank"
+      class="glitchyBtn"
+      data-text="#@#@#@#@"
+    >View More</a>
   </div>
 </template>
 
@@ -18,6 +21,9 @@
 import TypeIt from "typeit";
 export default {
   name: "FocusContainer",
+  data: () => ({
+    isMobile: /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
+  }),
   created() {
     setTimeout(() => {
       new TypeIt("#simpleUsage", {
@@ -50,10 +56,12 @@ export default {
 </script>
 
 <style scoped>
-.retroLink {
-  font-size: 10px;
-  font-family: "Press Start 2P";
-  text-decoration: none;
-  color: white;
+.onTop{
+  z-index: 1;
+}
+@media (min-width: 48em) {
+  .splash {
+    width: 50%;
+  }
 }
 </style>
