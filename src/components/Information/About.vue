@@ -15,7 +15,7 @@
       </p>
       <p>
         You Can drop him an email at
-        <a href="mailto:patnaik.sidh96@gmail.com" target="_blank">
+        <a href="mailto:patnaik.sid96@gmail.com" target="_blank">
           <u>patnaik.sid96@gmail.com</u>
         </a>
       </p>
