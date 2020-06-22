@@ -6,7 +6,7 @@
     <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 align-left">
       <h2 class="white-color">
         Hello,
-        <br />I'm Sidharth Patnaik
+        <br />This is Sidharth Patnaik.
       </h2>
       <p class="lead iq-tw-4">
         This dude {{isMobile ? "on the top": "to the left"}} is not just another developer!
