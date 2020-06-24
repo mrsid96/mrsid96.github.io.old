@@ -19,7 +19,7 @@
           <u>patnaik.sid96@gmail.com</u>
         </a>
       </p>
-      <a class="button" target="_blank" href="./resume.pdf">
+      <a class="button" target="_blank" href="./../resume.pdf">
         Download his
         <u>Resume</u>
       </a>

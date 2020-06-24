@@ -7,7 +7,7 @@
       <p class="text">mrSid96</p>
     </div>.
     <h1 class="splash-head" id="simpleUsage"></h1>
-    <p class="splash-subhead">"Life shouldn't be stuck between 1s and 0s."</p>
+    <p class="splash-subhead">"Developing efficient solutions for modern experiences"</p>
     <a
       @click="$router.push({path: '/more'})"
       target="_blank"
