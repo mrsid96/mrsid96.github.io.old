@@ -20,7 +20,7 @@
         <b class="skillHolder" data-text="$$$$$$$$">{{framwork.name}}</b>
       </div>
     </div>
-    <h3 class="white-color">Development Platforms</h3>
+    <h3 class="white-color">Platforms</h3>
     <hr align="right" class="mrSidHR" />
     <div class="row">
       <div
