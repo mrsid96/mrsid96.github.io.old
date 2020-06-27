@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import * as THREE from "three";
-import NET from "vanta/dist/vanta.net.min";
+// import * as THREE from "three";
+// import NET from "vanta/dist/vanta.net.min";
 export default {
   name: "App",
   data: () => ({
@@ -17,20 +17,20 @@ export default {
   }),
   created() {
     setTimeout(() => {
-      NET({
-        el: "#vanta",
-        mouseControls: true,
-        touchControls: true,
-        minHeight: 200.0,
-        minWidth: 200.0,
-        scale: 1.0,
-        scaleMobile: 1.0,
-        THREE: THREE,
-        points: this.isMobile ? 3 : 10,
-        maxDistance: this.isMobile ? 14 : 20,
-        color: 0xbb909f,
-        backgroundColor: 0x232028
-      });
+      // NET({
+      //   el: "#vanta",
+      //   mouseControls: true,
+      //   touchControls: true,
+      //   minHeight: 200.0,
+      //   minWidth: 200.0,
+      //   scale: 1.0,
+      //   scaleMobile: 1.0,
+      //   THREE: THREE,
+      //   points: this.isMobile ? 3 : 10,
+      //   maxDistance: this.isMobile ? 14 : 20,
+      //   color: 0xbb909f,
+      //   backgroundColor: 0x232028
+      // });
     }, 200);
   }
 };

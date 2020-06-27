@@ -1,6 +1,6 @@
 <template>
   <div class="splash onTop">
-    <img class="avatar" src="@/assets/avatar.jpeg" />
+    <img class="avatar" src="@/assets/avatar.jpg" />
     <div class="glitch">
       <p class="text">mrSid96</p>
       <p class="text">mrSid96</p>
