@@ -8,18 +8,16 @@
         :key="skill.name"
         class="hoverCard col-xs-12 col-sm-12 col-md-6 col-lg-4"
       >
-        <div class="skillCard">
-          <div class="ssgb" :style="{ backgroundImage: `url(${skill.image})` }"></div>
-          <!-- <div align="left" class="col-xs-9 col-sm-9 col-md-9 col-lg-9"> -->
-          <div align="left">
+        <div class="row skillCard">
+          <div align="left" class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
             <b>#{{skill.rate}}</b>
             <ul>
               <li v-for="(item,i) in skill.experience" :key="skill.name+i">{{item}}</li>
             </ul>
           </div>
-          <!-- <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
             <img class="skillImg" :src="skill.image" width="100px" />
-          </div>-->
+          </div>
         </div>
         <b class="skillHolder" data-text="$$$$$$$$">{{skill.name}}</b>
       </div>
@@ -158,7 +156,7 @@ export default {
         rate: "Proficient",
         experience: [
           "Handling cronjobs, services, IPTables, and lots more.",
-          "Familiar with Debian, and Centos"
+          "Familiar with Centos, Debian, "
         ]
       },
       {
@@ -214,18 +212,7 @@ export default {
   padding: 5px;
 }
 .skillCard {
-  height: 140px;
+  height: 150px;
   overflow: scroll;
-  position: relative;
-}
-.ssgb {
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  filter: blur(2px) opacity(0.7);
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: 90px;
-  position: absolute;
 }
 </style>
