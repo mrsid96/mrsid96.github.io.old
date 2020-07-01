@@ -4,7 +4,7 @@ import FocusContainer from '@/components/FocusContainer.vue'
 import Information from '@/components/Information.vue'
 import About from '@/components/Information/About.vue'
 import Skills from '@/components/Information/Skills.vue'
-// import Experience from '@/components/Information/Experience.vue'
+import Experience from '@/components/Information/Experience.vue'
 import UnderConstruction from '@/components/Information/UnderConstruction.vue'
 
 Vue.use(Router)
@@ -30,6 +30,9 @@ export default new Router({
                 }, {
                     path: 'skills',
                     component: Skills
+                }, {
+                    path: 'experience',
+                    component: Experience
                 }, {
                     path: '/*',
                     component: UnderConstruction

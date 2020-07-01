@@ -212,7 +212,7 @@ export default {
   padding: 5px;
 }
 .skillCard {
-  height: 150px;
+  max-height: 150px;
   overflow: scroll;
 }
 </style>

@@ -1,59 +1,23 @@
 <template>
-  <div class="timeline">
-    <div class="entry">
-      <div class="title">
-        <h3>2014 - Present</h3>
-        <p>Title, Company</p>
+  <div>
+    <h1 class="white-color">Down the timeline</h1>
+    <div class="timelineContainer">
+      <div class="timeline-block timeline-block-left">
+        <div class="marker"></div>
+        <div class="timeline-content">
+          <h3>First Year</h3>
+          <span>Some work experience</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+        </div>
       </div>
-      <div class="body">
-        <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
-        <ul>
-          <li>Rerum sit libero possimus amet excepturi</li>
-          <li>Exercitationem enim dolores sunt praesentium dolorum praesentium</li>
-          <li>Modi aut dolores dignissimos sequi sit ut aliquid molestias deserunt illo</li>
-        </ul>
-      </div>
-    </div>
-    <div class="entry">
-      <div class="title">
-        <h3>2010 - Present</h3>
-        <p>Title, Company</p>
-      </div>
-      <div class="body">
-        <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
-        <ul>
-          <li>Rerum sit libero possimus amet excepturi</li>
-          <li>Exercitationem enim dolores sunt praesentium dolorum praesentium</li>
-          <li>Modi aut dolores dignissimos sequi sit ut aliquid molestias deserunt illo</li>
-        </ul>
-      </div>
-    </div>
-    <div class="entry">
-      <div class="title">
-        <h3>2009 - 2010</h3>
-        <p>Title, Company</p>
-      </div>
-      <div class="body">
-        <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
-        <ul>
-          <li>Rerum sit libero possimus amet excepturi</li>
-          <li>Exercitationem enim dolores sunt praesentium dolorum praesentium</li>
-          <li>Modi aut dolores dignissimos sequi sit ut aliquid molestias deserunt illo</li>
-        </ul>
-      </div>
-    </div>
-    <div class="entry">
-      <div class="title">
-        <h3>2006 - 2008</h3>
-        <p>Title, Company</p>
-      </div>
-      <div class="body">
-        <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
-        <ul>
-          <li>Rerum sit libero possimus amet excepturi</li>
-          <li>Exercitationem enim dolores sunt praesentium dolorum praesentium</li>
-          <li>Modi aut dolores dignissimos sequi sit ut aliquid molestias deserunt illo</li>
-        </ul>
+
+      <div class="timeline-block timeline-block-right">
+        <div class="marker"></div>
+        <div class="timeline-content">
+          <h3>Seconed Year</h3>
+          <span>Some work experience</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -65,84 +29,116 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-$gutter: 30px;
-$border-width: 4px;
-$dot-diameter: 8px;
-
-.timeline {
-  width: 90%;
-  padding: 100px 50px;
-  position: relative;
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: calc(20% + 28px); //$gutter/2
-    bottom: 0px;
-    width: $border-width;
-    background: #ddd;
-  }
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+<style scoped>
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
 }
 
-.entry {
-  clear: both;
-  text-align: left;
+body {
+  margin: 0;
+  padding: 30px 0;
+  font-family: "Roboto", sans-serif;
+  background: #f1f2f6;
+}
+
+.timelineContainer {
+  width: 80%;
+  padding: 50px 0;
+  margin: 50px auto;
   position: relative;
-  .title {
-    margin-bottom: 0.5em;
-    float: left;
-    width: 20%;
-    padding-right: $gutter;
-    text-align: right;
-    position: relative;
-    &:before {
-      content: "";
-      position: absolute;
-      width: $dot-diameter;
-      height: $dot-diameter;
-      border: $border-width solid salmon;
-      background-color: #fff;
-      border-radius: 100%;
-      top: 15%;
-      right: -$dot-diameter;
-      z-index: 99;
-    }
-    h3 {
-      margin: 0;
-      font-size: 120%;
-    }
-    p {
-      margin: 0;
-      font-size: 100%;
-    }
+  overflow: hidden;
+  text-align: initial;
+}
+
+.timelineContainer:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -1px;
+  width: 2px;
+  height: 100%;
+  background: #ccd1d9;
+  z-index: 1;
+}
+
+.timeline-block {
+  width: -webkit-calc(50% + 8px);
+  width: -moz-calc(50% + 8px);
+  width: calc(50% + 8px);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  justify-content: space-between;
+  clear: both;
+}
+
+.timeline-block-right {
+  float: right;
+}
+
+.timeline-block-left {
+  float: left;
+  direction: rtl;
+}
+
+.marker {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #f5f7fa;
+  background: #4fc1e9;
+  margin-top: 10px;
+  z-index: 9999;
+}
+
+.timeline-content {
+  width: 95%;
+  padding: 0 15px;
+}
+
+.timeline-content h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 25px;
+  font-weight: 500;
+  color: white;
+}
+
+.timeline-content span {
+  font-size: 15px;
+  color: #a4a4a4;
+}
+
+.timeline-content p {
+  font-size: 14px;
+  line-height: 1.5em;
+  word-spacing: 1px;
+}
+
+@media screen and (max-width: 768px) {
+  .timelineContainer:before {
+    left: 8px;
+    width: 2px;
   }
-  .body {
-    margin: 0 0 3em;
-    float: right;
-    width: 66%;
-    padding-left: $gutter;
-    p {
-      line-height: 1.4em;
-      &:first-child {
-        margin-top: 0;
-        font-weight: 400;
-      }
-    }
-    ul {
-      color: #aaa;
-      padding-left: 0;
-      list-style-type: none;
-      li:before {
-        content: "–";
-        margin-right: 0.5em;
-      }
-    }
+  .timeline-block {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .timeline-block-right {
+    float: none;
+  }
+
+  .timeline-block-left {
+    float: none;
+    direction: ltr;
   }
 }
 </style>
