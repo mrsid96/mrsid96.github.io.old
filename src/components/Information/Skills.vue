@@ -213,6 +213,6 @@ export default {
 }
 .skillCard {
   max-height: 150px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 </style>

@@ -2,21 +2,16 @@
   <div>
     <h1 class="white-color">Down the timeline</h1>
     <div class="timelineContainer">
-      <div class="timeline-block timeline-block-left">
-        <div class="marker"></div>
-        <div class="timeline-content">
-          <h3>First Year</h3>
-          <span>Some work experience</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-        </div>
-      </div>
-
-      <div class="timeline-block timeline-block-right">
-        <div class="marker"></div>
-        <div class="timeline-content">
-          <h3>Seconed Year</h3>
-          <span>Some work experience</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+      <div v-for="(item, i) in experiences" :key="item.name">
+        <div
+          :class="i%2==0 ? 'timeline-block timeline-block-left' : 'timeline-block timeline-block-right'"
+        >
+          <div class="marker"></div>
+          <div class="timeline-content">
+            <h3>{{item.name}}</h3>
+            <span>{{item.span}}</span>
+            <p>{{item.content}}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -25,7 +20,20 @@
 
 <script>
 export default {
-  data: () => ({})
+  data: () => ({
+    experiences:[
+      {
+        name: "Signzy Technologies Pvt. Ltd",
+        span: "March 2018 - Present",
+        content: "Full Stack Developer with 2+ years of experience in developing  fault-tolerant SAAS and on-premise consumer onboarding products for multiple financial segments of India. Currently leading the tech team developing V-CIP (Video-based Customer Identification  Process) solution that would enable Financial Institutions to onboard users in near real-time."
+      }, 
+      {
+        name: "NIST Technology consulting services",
+        span: "June 2017 - Oct 2017",
+        content: "Was working as an embedded intern and actively participated in ongoing projects, including a vehicle tracking system, and realtime monitoring of weather parameters."
+      }
+    ]
+  })
 };
 </script>
 
@@ -35,13 +43,6 @@ export default {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   outline: none;
-}
-
-body {
-  margin: 0;
-  padding: 30px 0;
-  font-family: "Roboto", sans-serif;
-  background: #f1f2f6;
 }
 
 .timelineContainer {
@@ -123,7 +124,7 @@ body {
   word-spacing: 1px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1440px) {
   .timelineContainer:before {
     left: 8px;
     width: 2px;
