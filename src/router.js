@@ -5,6 +5,7 @@ import Information from '@/components/Information.vue'
 import About from '@/components/Information/About.vue'
 import Skills from '@/components/Information/Skills.vue'
 import Experience from '@/components/Information/Experience.vue'
+import Contact from '@/components/Information/Contact.vue'
 import UnderConstruction from '@/components/Information/UnderConstruction.vue'
 
 Vue.use(Router)
@@ -33,6 +34,9 @@ export default new Router({
                 }, {
                     path: 'experience',
                     component: Experience
+                }, {
+                    path: 'contact',
+                    component: Contact
                 }, {
                     path: '/*',
                     component: UnderConstruction
