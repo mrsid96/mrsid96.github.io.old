@@ -35,12 +35,12 @@ export default {
         path: "/more/contact"
       },
       {
-        displayText: "Projects",
-        path: "/more/projects"
-      },
-      {
         displayText: "Experience",
         path: "/more/experience"
+      },
+      {
+        displayText: "Projects",
+        path: "/more/projects"
       },
       {
         displayText: "Skills",
@@ -66,8 +66,8 @@ export default {
       let selectedMenu = this.menuItems.filter(item =>
         path.includes(item.path)
       );
-      if(selectedMenu[0]){
-        return selectedMenu[0]["displayText"]
+      if (selectedMenu[0]) {
+        return selectedMenu[0]["displayText"];
       }
     }
   },

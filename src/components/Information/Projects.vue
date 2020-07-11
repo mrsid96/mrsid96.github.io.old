@@ -120,7 +120,7 @@ export default {
         projectName: "Current Account Solution",
         technologies: ["NodeJs", "Flutter", "MongoDb"],
         summary:
-          "Developed an end to end solution for one the leading bank in India, which includes the mobile application as well as the microservices. Integrating third party services provided by the bank, and pushing data to core banking systems.",
+          "Developed an end to end solution for one the leading banks in India, which includes the mobile application as well as the microservices. Integrating third party services provided by the bank, and pushing data to core banking systems.",
         details: [
           "Developed a workflow solution for onboarding a current account customer",
           "Developed a Flutter mobile application, using MVVM architecture, building UI from JSON, dynamic components, interceptors for data encryption in transit",
